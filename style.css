@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+}
+
+.wrapper {
+  background-color: #f6f6f6;
+  /* background: linear-gradient(to right, #43e97b 0%, #38f9d7 100%); */
+  max-width: 360px;
+  width: 100%;
+  height: 360px;
+  border: 3px solid #4facfe;
+  border-radius: 10px;
+  box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.3);
+  padding: 30px;
+}
+
+.wrapper input {
+  display: none;
+}
+.wrapper .content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+.wrapper .outer {
+  height: 135px;
+  width: 135px;
+  overflow: hidden;
+}
+
+.outer li {
+  height: 20%;
+  width: 100%;
+  list-style: none;
+  transition: all 0.3s ease;
+}
+#star-1:checked ~ .content .outer .slideImg {
+  margin-top: -135px;
+}
+#star-2:checked ~ .content .outer .slideImg {
+  margin-top: -270px;
+}
+#star-3:checked ~ .content .outer .slideImg {
+  margin-top: -405px;
+}
+#star-4:checked ~ .content .outer .slideImg {
+  margin-top: -540px;
+}
+#star-5:checked ~ .content .outer .slideImg {
+  margin-top: -675px;
+}
+.outer li img {
+  height: 100%;
+  width: 100%;
+}
+.outer .emojis {
+  height: 500%;
+  display: flex;
+  flex-direction: column;
+}
+.content .stars {
+  margin-top: 30px;
+}
+
+.stars label {
+  font-size: 30px;
+  color: #ccc;
+  margin: 0 3px;
+}
+
+/* STAR-1 HOVER */
+#star-1:hover ~ .content .stars .star-1,
+/* CHECKED */
+#star-1:checked ~ .content .stars .star-1,
+
+/* STAR-2 HOVER */
+#star-2:hover ~ .content .stars .star-1,
+#star-2:hover ~ .content .stars .star-2,
+/* CHECKED */
+#star-2:checked ~ .content .stars .star-1,
+#star-2:checked ~ .content .stars .star-2,
+/* STAR-3 HOVER */
+#star-3:hover ~ .content .stars .star-1,
+#star-3:hover ~ .content .stars .star-2,
+#star-3:hover ~ .content .stars .star-3,
+/* CHECKED */
+#star-3:checked ~ .content .stars .star-1,
+#star-3:checked ~ .content .stars .star-2,
+#star-3:checked ~ .content .stars .star-3,
+/* STAR-4 HOVER */
+#star-4:hover ~ .content .stars .star-1,
+#star-4:hover ~ .content .stars .star-2,
+#star-4:hover ~ .content .stars .star-3,
+#star-4:hover ~ .content .stars .star-4,
+/* CHECKED */
+#star-4:checked ~ .content .stars .star-1,
+#star-4:checked ~ .content .stars .star-2,
+#star-4:checked ~ .content .stars .star-3,
+#star-4:checked ~ .content .stars .star-4,
+/* STAR-5 HOVER */
+#star-5:hover ~ .content .stars .star-1,
+#star-5:hover ~ .content .stars .star-2,
+#star-5:hover ~ .content .stars .star-3,
+#star-5:hover ~ .content .stars .star-4,
+#star-5:hover ~ .content .stars .star-5,
+/* CHECKED */
+#star-5:checked ~ .content .stars .star-1,
+#star-5:checked ~ .content .stars .star-2,
+#star-5:checked ~ .content .stars .star-3,
+#star-5:checked ~ .content .stars .star-4,
+#star-5:checked ~ .content .stars .star-5 {
+  color: #fed151;
+  cursor: pointer;
+}
+.wrapper .footer {
+  height: 55px;
+  width: 100%;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer span {
+  font-size: 17px;
+  font-weight: 600;
+  color: #333;
+}
+
+.footer .text::before {
+  content: "Califica Tu Experiencia";
+}
+
+.footer .numb::before {
+  content: "0 de 5";
+}
+
+/* STAR-1 BEFORE */
+#star-1:checked ~ .footer .text::before {
+  content: "No Me Gusto";
+}
+#star-1:checked ~ .footer .numb::before {
+  content: "1 de 5";
+}
+/* STAR-2 BEFORE */
+#star-2:checked ~ .footer .text::before {
+  content: "Fue Regular";
+}
+#star-2:checked ~ .footer .numb::before {
+  content: "2 de 5";
+}
+/* STAR-1 BEFORE */
+#star-3:checked ~ .footer .text::before {
+  content: " Me Gusto";
+}
+#star-3:checked ~ .footer .numb::before {
+  content: "3 de 5";
+}
+/* STAR-1 BEFORE */
+#star-4:checked ~ .footer .text::before {
+  content: "Fue Increible";
+}
+#star-4:checked ~ .footer .numb::before {
+  content: "4 de 5";
+}
+/* STAR-1 BEFORE */
+#star-5:checked ~ .footer .text::before {
+  content: "Me Enamore";
+}
+#star-5:checked ~ .footer .numb::before {
+  content: "5 de 5";
+}
