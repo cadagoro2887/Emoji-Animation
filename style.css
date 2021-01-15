@@ -46,19 +46,29 @@ body {
   list-style: none;
   transition: all 0.3s ease;
 }
+#star-1:hover ~ .content .outer .slideImg,
 #star-1:checked ~ .content .outer .slideImg {
+  transition-delay: 0.2s;
   margin-top: -135px;
 }
+#star-2:hover ~ .content .outer .slideImg,
 #star-2:checked ~ .content .outer .slideImg {
+  transition-delay: 0.2s;
   margin-top: -270px;
 }
+#star-3:hover ~ .content .outer .slideImg,
 #star-3:checked ~ .content .outer .slideImg {
+  transition-delay: 0.2s;
   margin-top: -405px;
 }
+#star-4:hover ~ .content .outer .slideImg,
 #star-4:checked ~ .content .outer .slideImg {
+  transition-delay: 0.2s;
   margin-top: -540px;
 }
+#star-5:hover ~ .content .outer .slideImg,
 #star-5:checked ~ .content .outer .slideImg {
+  transition-delay: 0.2s;
   margin-top: -675px;
 }
 .outer li img {
